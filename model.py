@@ -96,12 +96,12 @@ class ConvModel(nn.Module):
         return self.DenseBase(internalState)
 
 
-def saveModel(model: nn.Module, filename='model.pt'):
+def saveModel(model: nn.Module, filename=r'.\auxfile\model.pt'):
     sd = model.state_dict()
     torch.save(sd, filename)
 
 
-def loadModel(filename='model.pt'):
+def loadModel(filename=r'.\auxfile\model.pt'):
     sd = torch.load(filename)
     model = ConvModel()
     model.load_state_dict(sd)

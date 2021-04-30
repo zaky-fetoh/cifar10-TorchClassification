@@ -3,7 +3,7 @@ import torchvision.datasets as vdatasets
 import torch.utils.data as data
 import torch
 
-ROOT = '\cifar10'
+ROOT = '.\cifar10'
 
 Scale = lambda x: (x - x.min()) / (x.max() - x.min())
 Noise = lambda x: x + torch.rand_like(x).normal_( ) * 0.3
